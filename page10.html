@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 10 - Tigre</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+     <div class="container">
+        <img src="tigre.jpg" alt="Tigre" class="blurred-image" onclick="toggleInfo('quiz1')">
+
+        <div id="quiz1" style="display:none;"><div class="notice">
+<p>Bienvenue dans l'énigme caché du ... 🎨 Le but du jeu est simple : deviner l'animal représenté dans l’œuvre de l’artiste 🖼️✨ Pour révéler / cacher la réponse, cliquez sur la bande floutée 🔍 </p>
+</div>
+
+<div class="blurred-text" onclick="revealText(this)" style="background-color: #ff4500; color: white;">
+    Tigre
+</div>
+            <div class="question-container">
+                <input type="text" id="answer1" placeholder="Votre réponse">
+                <button onclick="checkAnswer('answer1', 'tigre')">Confirmer</button>
+            </div>
+            <p id="result1"></p>
+        
+        </div>
+
+
+       <div class="navigation">
+            <a href="page9.html">Précédent</a>
+            <a href="page11.html">Suivant</a>
+        </div>
+    </div>
+    <script>
+        function showInfo() {
+            document.getElementById('info').style.display = 'block';
+            document.getElementById('info').style.animation = 'fadeIn 2s';
+        }
+    </script>
+    <script src="script.js"></script>
+
+</body>
+</html>
