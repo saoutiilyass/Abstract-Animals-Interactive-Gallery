@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie d'art numérique</title>
+<style>
+        .copyright-notice {
+            background-color: #ff4500;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 600px;
+            text-align: center;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+        .copyright-notice h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .copyright-notice p {
+            font-family: "Times New Roman", Times, serif;
+            color: white;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .copyright-notice a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .copyright-notice a:hover {
+            text-decoration: underline;
+        }
+
+        .gallery-image {
+            max-width: 100%;
+            height: auto;
+        }
+      #mute-button, #replay-button {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    </style>
+<p></p>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="copyright-notice">
+        <p>Toutes les images de la galerie sont protégées par des droits d'auteur ©️. Toute reproduction, distribution, modification ou utilisation de ces images sans autorisation préalable est strictement interdite.</p>
+    </div>
+    <div class="container">
+        <h1>Bienvenue sur la galerie d'art numérique interactive Abstract Animals</h1>
+<p>Bienvenue sur la galerie d'art numérique interactive des **Animaux abstraits** !
+
+Découvrez une série d'œuvres d'art d'animaux abstraits, créées avec passion par Ilyass Saouti. Artiste autodidacte, Ilyass met tout son cœur dans chaque création, cherchant à partager des émotions sincères avec ses spectateurs.
+
+En plus de son talent artistique, Ilyass est un créateur de contenu polyvalent qui aime se lancer des défis intellectuels. Toujours curieux et avide d'apprendre, il s'efforce de maîtriser de nouvelles compétences et de repousser ses limites. Il aime inspirer les gens à réaliser leurs rêves.
+
+Explorez la galerie d'art Abstract Animals et laissez-vous toucher par la simplicité et la beauté des œuvres d'Ilyass Saouti.</p>
+
+<div class="notice">
+<p>📋    Notice d'utilisation   🔍 Interagissez avec les images ! Cliquez dessus pour révéler / Cacher des informations 🖼️✨
+ Cliquez directement sur le bouton rouge pour explorer la série sans spoiler 🎨✨</p>
+</div>
+
+  <button onclick="startGame()">  Découvrir la série Abstract Animals </button><br><br>
+  <img src="abstractanimals.jpg" alt="Abstract Animals" class="blurred-image" onclick="toggleMusic()"><br><br>
+    <div class="notice">
+        <p id="info" style="display:none;">Quelle douce mélodie… D’où vient-elle ?</p>
+    </div>
+
+<h2>À propos de l’artiste</h2>
+<p>Né en Belgique à Charleroi, Ilyass Saouti est un artiste autodidacte qui s’est autodiscipliné pour réaliser ses rêves. Son parcours est une véritable source d’inspiration, démontrant que la passion et la détermination peuvent transcender les limites.
+
+Plongez dans l’univers captivant d’Ilyass, où chaque création est une fusion harmonieuse de technologie et d’art. Utilisant une tablette graphique et des applications d’effets, Ilyass donne vie à des visions abstraites qui capturent l’essence des animaux de manière surprenante et unique.
+
+Chaque pièce est méticuleusement réalisée, transformant des concepts abstraits en expériences visuelles et émotionnelles profondes. Les œuvres d’Ilyass ne se contentent pas de représenter des formes, elles invitent les spectateurs à voir au-delà de l’apparence et à ressentir l’âme de chaque création.
+
+Venez découvrir ces œuvres exceptionnelles dans sa galerie d'art et laissez-vous emporter par l’émotion et la profondeur de chaque pièce. Une expérience artistique inoubliable vous attend.</p>
+<br>
+<h2>L’expérience de la galerie</h2>
+<p>En explorant cette galerie, vous découvrirez une série fascinante d’œuvres où l’abstraction et la nature se rencontrent de manière harmonieuse. Chaque visite promet une nouvelle expérience visuelle, où les couleurs vibrantes et les formes fluides se combinent pour créer des compositions captivantes. Les œuvres d’Ilyass sont plus qu’un simple plaisir pour les yeux; elles sont une invitation à plonger dans un univers où chaque détail est pensé avec soin et chaque coup de pinceau numérique est chargé de signification.
+
+Pour rendre votre visite encore plus interactive et ludique, Ilyass a également créé un jeu unique. Une œuvre représentant un animal abstrait est présentée, et votre défi est de deviner quel animal l’artiste a représenté. La difficulté du jeu varie en fonction des animaux, vous invitant à observer attentivement et à interpréter les indices visuels pour découvrir les secrets cachés dans chaque œuvre.
+
+Plongez dans cet univers artistique et laissez-vous surprendre par la créativité et l’ingéniosité des œuvres d’Ilyass, tout en vous amusant avec le jeu interactif qu’il a conçu ! </p>
+<br>
+<h2>Pourquoi cette galerie est unique ?</h2>
+<p>Chaque création est une œuvre unique, réalisée avec une attention minutieuse aux détails et une passion évidente. Grâce à l’utilisation de tablettes graphiques et d’applications d’effets modernes, les rendus sont tout simplement époustouflants. Chaque pièce est le résultat de nombreuses heures de travail, témoignant de la patience et du dévouement de l’artiste. Explorez cette galerie interactive et laissez-vous séduire par les animaux abstraits d’Ilyass Saouti. Chaque œuvre vous invite à découvrir un monde où l’abstraction et la réalité se rencontrent, offrant une perspective nouvelle sur la beauté de la nature.
+
+Pour rendre votre expérience encore plus immersive, Ilyass a composé la musique originale du site et a codé la galerie de A à Z, assurant ainsi une authenticité totale. Nous espérons que votre visite sera aussi inspirante que les œuvres elles-mêmes. Bonne exploration !</p>
+       
+    </div>
+ 
+<script>
+        function showInfo() {
+            document.getElementById('info').style.display = 'block';
+            document.getElementById('info').style.animation = 'fadeIn 2s';
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
+
